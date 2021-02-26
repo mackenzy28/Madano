@@ -178,7 +178,6 @@ body {
                 padding: 8px 16px !important;
                 color: #fff !important;
                 color: $color-orange !important;
-                //background: $color-orange;
                 border: 2px solid $color-orange;
                 transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
@@ -213,6 +212,7 @@ body {
                         @include media-breakpoint-up(lg) {
                             &::after {
                                 bottom: 0;
+                                background: $color-orange;
                             }
                         }
                     }

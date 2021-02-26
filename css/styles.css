@@ -137,7 +137,8 @@ body {
         color: #333; }
         @media (min-width: 992px) {
           body .navbar.navbar-expand-lg .navbar-nav li.active .nav-link::after {
-            bottom: 0; } }
+            bottom: 0;
+            background: #ff8800; } }
       body .navbar.navbar-expand-lg .navbar-nav li ul {
         list-style: none;
         margin: 0;

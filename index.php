@@ -19,7 +19,7 @@
             <div class="wrapper">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-sm-10 col-md-6 col-lg-5 col-xl-6">
+                        <div class="col-12 col-sm-11 col-md-7 col-lg-6">
                             <section class="main-banner">
                                 <div class="banner-logo">
                                     <img src="/images/logo-madano-full.png" alt="Madano logo"/>
@@ -38,8 +38,8 @@
             <div class="container">
                 <section class="about" data-action="fade-in">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 col-lg-8">
-                            <h2>We seek to make the right connections, change attitudes and influence behaviours that enhance and shape our clients’ futures</h2>
+                        <div class="col-md-8 col-lg-8">
+                            <h3>We seek to make the right connections, change attitudes and influence behaviours that enhance and shape our clients’ futures</h3>
                             <a href="#" class="section-link text-center">About</a>
                         </div>
                     </div>
@@ -79,8 +79,8 @@
                 <section class="projects">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6">
-                            <h2 data-action="fade-in">How we’ve shaped the future, in the past</h2>
-                            <h3 data-action="fade-in">Did you hear the one about how Madano helped?</h3>
+                            <h3 data-action="fade-in">How we’ve shaped the future, in the past</h3>
+                            <h4 data-action="fade-in">Did you hear the one about how Madano helped?</h4>
                         </div>
                     </div>
                     <div class="row articles">
@@ -122,7 +122,7 @@
                 <section class="news">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <h2 data-action="fade-in">We are a communications consultancy helping to shape the future</h2>
+                            <h3 data-action="fade-in">We are a communications consultancy helping to shape the future</h3>
                             <a href="#" class="section-link banner-link" data-action="fade-in">News & Views</a>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-sm-10 col-md-6 col-lg-5 col-xl-6">
-                            <section class="main-banner">
+                            <section class="main-banner footer-banner">
                                 <div class="banner-logo">
                                     <img src="/images/logo-madano-full.png" data-action="fade-in" alt="Madano logo"/>
                                     </div>
@@ -242,20 +242,20 @@
                             </section>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 text-center contact-us" data-action="fade-in">
+                    <div class="row justify-content-center footer-info" data-action="fade-in">
+                        <div class="col-md-4 text-center contact-us">
                             <h4>Contact Us</h4>
                             <p>+44 (0)20 7593 4000</p>
                             <a href="mailto:info@madano.com">info@madano.com</a>
                         </div>
-                        <div class="col-md-4 text-center follow-us" data-action="fade-in">
+                        <div class="col-md-4 text-center follow-us">
                             <h4>Follow us</h4>
                             <a href="#" class="social-link linkedin" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="social-link twitter" title="twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link instagram" title="instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-link facebook" title="facebook"><i class="fab fa-facebook-f"></i></a>
                         </div>
-                        <div class="col-md-4 text-center general-info" data-action="fade-in">
+                        <div class="col-md-4 text-center general-info">
                             <h4>Info</h4>
                             <a href="#">Privacy Policy</a>
                             <a href="#">Recruitment Policy</a>

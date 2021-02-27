@@ -35,12 +35,28 @@ button:focus {
     outline: none;
 }
 
+html {
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 14px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 18px;
+    }
+}
+
 body {
     background:#eee;
     font-family: $font-family-Montserrat;
 
     h1 {
-        font-size: 30px;
+        font-size: 22px;
         color: #fff;
         text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 
@@ -49,7 +65,7 @@ body {
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 28px;
+            font-size: 30px;
         }
 
         @include media-breakpoint-up(xl) {
@@ -58,24 +74,32 @@ body {
     }
 
     h2 {
-        font-weight: 600;
-        font-size: 36px;
-        margin-bottom: 30px;
         color: $color-orange;
+        font-weight: 600;
+        font-size: 1.375rem;
+        margin-bottom: 1rem;
     }
 
     h3 {
+        color: $color-orange;
         font-weight: 600;
+        font-size: 1.66rem;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
         color: $color-mid-grey;
-        margin-bottom: 30px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
     }
 
     p {
         color: $color-mid-grey;
-        font-size: 18px;
+        font-size: 1rem;
         font-weight: 500;
         line-height: 1.6;
-        margin-bottom: 30px;
+        margin-bottom: 1rem;
     }
 
     .align-right {
@@ -83,16 +107,8 @@ body {
     }
 
     .wrapper {
-        padding: 92px 0;
+        padding: 5rem 0;
         position: relative;
-
-        @include media-breakpoint-up(md) {
-            padding: 117px 0;
-        }
-
-        @include media-breakpoint-up(lg) {
-            padding: 100px 0;
-        }
 
         &.wrapper-card {
             padding-top: 0;
@@ -330,6 +346,7 @@ body {
     }
 
     .main-header {
+        position: relative;
         height: auto;
         width: 100%;
         background-repeat: no-repeat;
@@ -337,12 +354,21 @@ body {
         background-position: 50% 50%;
         background-image: url('/images/background-image1.jpg');
 
+        &::after {
+            content:'';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            background-color: rgba(0,0,0,0.3);
+        }
+
         @include media-breakpoint-up(lg) {
-            height: 510px;
+            height: 650px;
         }
 
         @include media-breakpoint-up(xl) {
-            height: 600px;
+            height: 650px;
             background-position: 50% 70%;
         }
     }
@@ -351,10 +377,18 @@ body {
         margin-bottom: 50px;
 
         .description {
-            padding: 80px 50px;
+            padding: 3rem 2rem;
             flex-direction: column;
             display: flex;
             background: #fff;
+            
+            @include media-breakpoint-up(md) {
+                padding: 4rem 1rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: 4rem 2rem;
+            }
         }
 
         .section-link {
@@ -365,7 +399,7 @@ body {
     .section-link {
         display: inline-block;
         position: relative;
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: 600;
         text-transform: uppercase;
         color: $color-black;
@@ -396,16 +430,41 @@ body {
     }
 
     .main-banner {
-        padding-top: 50px;
+        margin-top: 100px;
         text-align: center;
         margin-bottom: 0;
+        padding: 0 20px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 100px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 100px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 120px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 100px;
+        }
 
         .banner-slogan {
             margin-bottom: 20px;
         }
 
         img {
-            max-width: 100%;
+            width: 90%;
+
+            @include media-breakpoint-up(md) {
+                width: 80%;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 90%;
+            }
         }
     }
 
@@ -445,35 +504,30 @@ body {
         text-align: center;
     }
 
+    .people {
+        margin-bottom: 0;
+    }
+
     .projects, 
     .news {
-        h2 {
-            font-size: 40px;
+        h3, h4 {
+            padding: 0 2rem;
             text-align: center;
         }
 
-        h3 {
-            font-size: 30px;
-            text-align: center;
+        h4 {
+            margin-bottom: 0;
         }
 
         p {
-            font-size: 14px;
-
-            @include media-breakpoint-up(lg) {
-                font-size: 18px;
-            }
+            margin-bottom: 2rem;
         }
 
         .date {
             color: $color-orange;
             font-weight: 600;
             margin-bottom: 15px;
-            font-size: 14px;
-
-            @include media-breakpoint-up(lg) {
-                font-size: 18px;
-            }
+            font-size: 1rem;
         }
 
         .project-wrapper {
@@ -524,15 +578,24 @@ body {
         }
 
         .project-description {
-            height: 250px;
-            padding:  30px;
+            padding:  2rem;
             position: relative;
             background: #fff;
 
+            @include media-breakpoint-up(md) {
+                height: 200px;
+                padding: 2rem 1rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 250px;
+                padding: 2rem;
+            }
+
             .section-link {
                 position: absolute;
-                right: 30px;
-                bottom: 35px;
+                right: 2rem;
+                bottom: 2rem;
             }
         }
 
@@ -545,7 +608,7 @@ body {
             a {
                 text-transform: capitalize;
                 color: $color-mid-grey;
-                font-size: 16px;
+                font-size: 1rem;
 
                 &:hover {
                     text-decoration: none;
@@ -610,7 +673,6 @@ body {
 
     footer {
         .wrapper {
-            min-height: 650px;
             width: 100%;
             background-repeat: no-repeat;
             background-size: cover;
@@ -618,27 +680,34 @@ body {
             background-image: url('/images/background-footer.jpg');
         }
 
-        .main-banner {
+        .footer-banner {
+            margin-top: 0;
             margin-bottom: 50px;
+            text-align: center;
         }
 
         h4 {
             color: $color-orange;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
         }
 
         p, a {
             display: block;
-            font-size: 18px;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
             color: #fff;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
             
             &:hover {
                 color: #fff;
             }
+        }
+
+        .contact-us,
+        .follow-us {
+            margin-bottom: 2rem;
         }
 
         .social-link {
@@ -759,8 +828,8 @@ body {
     .news,
     .projects {
         opacity: 1; 
-        h2,
         h3,
+        h4,
         .banner-link,
         .project-wrapper {
             opacity: 0;
@@ -789,9 +858,7 @@ body {
     footer {
         .banner-logo img,
         .banner-slogan img,
-        .contact-us,
-        .follow-us,
-        .general-info {
+        .footer-info {
             opacity: 0;
             transition: all 0.8s ease 0s;
             -webkit-transition: all 0.8s ease 0s;

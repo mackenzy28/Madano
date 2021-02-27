@@ -11,11 +11,23 @@ ul, li {
 button:focus {
   outline: none; }
 
+html {
+  font-size: 16px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 14px; } }
+  @media (min-width: 992px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 18px; } }
+
 body {
   background: #eee;
   font-family: "Montserrat", sans-serif; }
   body h1 {
-    font-size: 30px;
+    font-size: 22px;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
     @media (min-width: 768px) {
@@ -23,36 +35,36 @@ body {
         font-size: 25px; } }
     @media (min-width: 992px) {
       body h1 {
-        font-size: 28px; } }
+        font-size: 30px; } }
     @media (min-width: 1200px) {
       body h1 {
         font-size: 34px; } }
   body h2 {
+    color: #ff8800;
     font-weight: 600;
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #ff8800; }
+    font-size: 1.375rem;
+    margin-bottom: 1rem; }
   body h3 {
+    color: #ff8800;
     font-weight: 600;
+    font-size: 1.66rem;
+    margin-bottom: 1rem; }
+  body h4 {
     color: #949699;
-    margin-bottom: 30px; }
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem; }
   body p {
     color: #949699;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 30px; }
+    margin-bottom: 1rem; }
   body .align-right {
     float: right; }
   body .wrapper {
-    padding: 92px 0;
+    padding: 5rem 0;
     position: relative; }
-    @media (min-width: 768px) {
-      body .wrapper {
-        padding: 117px 0; } }
-    @media (min-width: 992px) {
-      body .wrapper {
-        padding: 100px 0; } }
     body .wrapper.wrapper-card {
       padding-top: 0; }
     body .wrapper.grey {
@@ -222,32 +234,46 @@ body {
         text-decoration: none;
         color: #333; }
   body .main-header {
+    position: relative;
     height: auto;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     background-image: url("/images/background-image1.jpg"); }
+    body .main-header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.3); }
     @media (min-width: 992px) {
       body .main-header {
-        height: 510px; } }
+        height: 650px; } }
     @media (min-width: 1200px) {
       body .main-header {
-        height: 600px;
+        height: 650px;
         background-position: 50% 70%; } }
   body section {
     margin-bottom: 50px; }
     body section .description {
-      padding: 80px 50px;
+      padding: 3rem 2rem;
       flex-direction: column;
       display: flex;
       background: #fff; }
+      @media (min-width: 768px) {
+        body section .description {
+          padding: 4rem 1rem; } }
+      @media (min-width: 992px) {
+        body section .description {
+          padding: 4rem 2rem; } }
     body section .section-link {
       align-self: flex-end; }
   body .section-link {
     display: inline-block;
     position: relative;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     color: #333;
@@ -270,13 +296,32 @@ body {
       body .section-link:hover::after {
         background: #ff8800; }
   body .main-banner {
-    padding-top: 50px;
+    margin-top: 100px;
     text-align: center;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0 20px; }
+    @media (min-width: 576px) {
+      body .main-banner {
+        margin-top: 100px; } }
+    @media (min-width: 768px) {
+      body .main-banner {
+        margin-top: 100px; } }
+    @media (min-width: 992px) {
+      body .main-banner {
+        margin-top: 120px; } }
+    @media (min-width: 1200px) {
+      body .main-banner {
+        margin-top: 100px; } }
     body .main-banner .banner-slogan {
       margin-bottom: 20px; }
     body .main-banner img {
-      max-width: 100%; }
+      width: 90%; }
+      @media (min-width: 768px) {
+        body .main-banner img {
+          width: 80%; } }
+      @media (min-width: 992px) {
+        body .main-banner img {
+          width: 90%; } }
   body .expertise,
   body .people,
   body .work {
@@ -306,31 +351,25 @@ body {
       order: 2; } }
   body .about {
     text-align: center; }
-  body .projects h2,
-  body .news h2 {
-    font-size: 40px;
+  body .people {
+    margin-bottom: 0; }
+  body .projects h3, body .projects h4,
+  body .news h3,
+  body .news h4 {
+    padding: 0 2rem;
     text-align: center; }
-  body .projects h3,
-  body .news h3 {
-    font-size: 30px;
-    text-align: center; }
+  body .projects h4,
+  body .news h4 {
+    margin-bottom: 0; }
   body .projects p,
   body .news p {
-    font-size: 14px; }
-    @media (min-width: 992px) {
-      body .projects p,
-      body .news p {
-        font-size: 18px; } }
+    margin-bottom: 2rem; }
   body .projects .date,
   body .news .date {
     color: #ff8800;
     font-weight: 600;
     margin-bottom: 15px;
-    font-size: 14px; }
-    @media (min-width: 992px) {
-      body .projects .date,
-      body .news .date {
-        font-size: 18px; } }
+    font-size: 1rem; }
   body .projects .project-wrapper,
   body .news .project-wrapper {
     margin-top: 50px;
@@ -370,15 +409,24 @@ body {
     transition: all 0.3s ease; }
   body .projects .project-description,
   body .news .project-description {
-    height: 250px;
-    padding: 30px;
+    padding: 2rem;
     position: relative;
     background: #fff; }
+    @media (min-width: 768px) {
+      body .projects .project-description,
+      body .news .project-description {
+        height: 200px;
+        padding: 2rem 1rem; } }
+    @media (min-width: 992px) {
+      body .projects .project-description,
+      body .news .project-description {
+        height: 250px;
+        padding: 2rem; } }
     body .projects .project-description .section-link,
     body .news .project-description .section-link {
       position: absolute;
-      right: 30px;
-      bottom: 35px; }
+      right: 2rem;
+      bottom: 2rem; }
   body .projects .project-navigation-links,
   body .news .project-navigation-links {
     display: flex;
@@ -389,7 +437,7 @@ body {
     body .news .project-navigation-links a {
       text-transform: capitalize;
       color: #949699;
-      font-size: 16px; }
+      font-size: 1rem; }
       body .projects .project-navigation-links a:hover,
       body .news .project-navigation-links a:hover {
         text-decoration: none; }
@@ -433,27 +481,31 @@ body {
         body .company-info .madano-partners {
           flex-wrap: nowrap; } }
   body footer .wrapper {
-    min-height: 650px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     background-image: url("/images/background-footer.jpg"); }
-  body footer .main-banner {
-    margin-bottom: 50px; }
+  body footer .footer-banner {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center; }
   body footer h4 {
     color: #ff8800;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9); }
   body footer p, body footer a {
     display: block;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9); }
     body footer p:hover, body footer a:hover {
       color: #fff; }
+  body footer .contact-us,
+  body footer .follow-us {
+    margin-bottom: 2rem; }
   body footer .social-link {
     display: inline-block;
     font-size: 20px;
@@ -559,12 +611,12 @@ body {
   body .news,
   body .projects {
     opacity: 1; }
-    body .news h2,
     body .news h3,
+    body .news h4,
     body .news .banner-link,
     body .news .project-wrapper,
-    body .projects h2,
     body .projects h3,
+    body .projects h4,
     body .projects .banner-link,
     body .projects .project-wrapper {
       opacity: 0;
@@ -584,9 +636,7 @@ body {
     -webkit-transition: all 0.8s ease; }
   body footer .banner-logo img,
   body footer .banner-slogan img,
-  body footer .contact-us,
-  body footer .follow-us,
-  body footer .general-info {
+  body footer .footer-info {
     opacity: 0;
     transition: all 0.8s ease 0s;
     -webkit-transition: all 0.8s ease 0s; }

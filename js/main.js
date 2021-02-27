@@ -29,6 +29,6 @@ $(document).ready(function() {
                 $(this.element).addClass("fade-in");
             }
         },
-        offset: '70%'
+        offset: '90%'
     })
 });
